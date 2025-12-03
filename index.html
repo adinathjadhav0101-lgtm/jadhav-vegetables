@@ -1,37 +1,224 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jadhav Vegetables</title>
   <style>
     :root {
       --green: #0b8a3e;
       --accent: #f6f6f6;
+      --card-bg: #e0f7ea;
     }
 
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      font-family: Arial, sans-serif;
       margin: 0;
       color: #222;
       background: #fff;
     }
 
     header {
-      background: linear-gradient(90deg, #e8f7ea, white);
+      background: linear-gradient(90deg,#e8f7ea,white);
       padding: 20px;
       text-align: center;
       border-bottom: 4px solid var(--green);
     }
 
-    .brand {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--green);
+    .brand { font-size: 28px; font-weight: 700; color: var(--green); }
+    .tag { color: #444; margin-top: 6px; }
+
+    .container { max-width: 1000px; margin: 18px auto; padding: 0 16px; }
+
+    .hero {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .tag {
-      color: #444;
+    .hero .left { flex: 1; min-width: 240px; }
+    .hero h1 { margin: 0; font-size: 26px; }
+    .hero p { margin: 8px 0 14px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .btn-secondary { background: #444; }
 
+    footer {
+      background: #f9f9f9;
+      padding: 16px;
+      text-align: center;
+      margin-top: 18px;
+      border-top: 1px solid #eee;
+    }
+    .small { font-size: 13px; color: #555; }
 
+    /* Vegetable grid */
+    .vegetables {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
 
+    .veg-card {
+      background: var(--card-bg);
+      border: 2px solid var(--green);
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .veg-card h3 {
+      margin: 6px 0;
+      color: var(--green);
+      font-size: 18px;
+    }
+
+    .veg-card p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    @media(max-width:650px){
+      .hero { flex-direction: column; align-items: flex-start; }
+      .hero h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Jadhav Vegetables</div>
+    <div class="tag">Fresh vegetables delivered to Rahatani Phata — Morya Colony</div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="left">
+        <h1>Fresh veg at your doorstep</h1>
+        <p>Daily fresh arrivals — tomatoes, onions, potatoes, spinach and more. Home delivery available in Rahatani Phata area.</p>
+        <a class="btn" href="https://wa.me/917410584407?text=Hello%20Jadhav%20Vegetables%2C%20I%20want%20to%20order" target="_blank">Order on WhatsApp</a>
+        <a class="btn btn-secondary" href="tel:+917370518698">Call: 9370518698</a>
+      </div>
+      <div class="right" style="min-width:200px;max-width:320px">
+        <img src="https://via.placeholder.com/320x220.png?text=Fresh+Vegetables" alt="Fresh Veg" style="width:100%;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,0.08)">
+      </div>
+    </section>
+
+    <!-- Vegetables Grid -->
+    <h2 style="color: var(--green); margin-top: 30px;">Vegetables & Prices</h2>
+    <div class="vegetables">
+      <div class="veg-card">
+        <h3>Fenugreek</h3>
+        <p>Quantity: 1</p>
+        <p>Price: ₹30</p>
+      </div>
+      <div class="veg-card">
+        <h3>Green Peas</h3>
+        <p>Quantity: 1kg</p>
+        <p>Price: ₹100/kg</p>
+      </div>
+      <div class="veg-card">
+        <h3>Tandusa</h3>
+        <p>Quantity: 1</p>
+        <p>Price: ₹30</p>
+      </div>
+      <div class="veg-card">
+        <h3>Onion</h3>
+        <p>Quantity: 1kg</p>
+        <p>Price: ₹25/kg</p>
+      </div>
+      <div class="veg-card">
+        <h3>Potato</h3>
+        <p>Quantity: 1kg</p>
+        <p>Price: ₹40/kg</p>
+      </div>
+      <div class="veg-card">
+        <h3>Ginger</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹30</p>
+      </div>
+      <div class="veg-card">
+        <h3>Chili Pepper</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹30</p>
+      </div>
+      <div class="veg-card">
+        <h3>Garlic</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹30</p>
+      </div>
+      <div class="veg-card">
+        <h3>Tomato</h3>
+        <p>Quantity: 1kg</p>
+        <p>Price: ₹50/kg</p>
+      </div>
+      <div class="veg-card">
+        <h3>Cabbage</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹20</p>
+      </div>
+      <div class="veg-card">
+        <h3>Cauliflower</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹30</p>
+      </div>
+      <div class="veg-card">
+        <h3>Lemon</h3>
+        <p>Quantity: 2 pieces</p>
+        <p>Price: ₹10</p>
+      </div>
+      <div class="veg-card">
+        <h3>Dhaniya</h3>
+        <p>Quantity: 1</p>
+        <p>Price: ₹25</p>
+      </div>
+      <div class="veg-card">
+        <h3>Matki</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹40</p>
+      </div>
+      <div class="veg-card">
+        <h3>Bottle Gourd</h3>
+        <p>Quantity: 1</p>
+        <p>Price: ₹20</p>
+      </div>
+      <div class="veg-card">
+        <h3>Lima Beans</h3>
+        <p>Quantity: 250gm</p>
+        <p>Price: ₹30/kg</p>
+      </div>
+    </div>
+
+    <!-- How to Order Section -->
+    <section style="margin-top:20px">
+      <h2 style="margin:0 0 8px">How to Order</h2>
+      <ol>
+        <li>Click <strong>Order on WhatsApp</strong> and tell us items & quantities.</li>
+        <li>Or call on <strong>9370518698</strong>.</li>
+        <li>Payment: Cash on delivery (start). Later online payments will be added.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="small">Address: Rahatani Phata, Morya Colony — Home delivery in local area</div>
+    <div class="small">© Jadhav Vegetables</div>
+  </footer>
+
+</body>
+</html>
