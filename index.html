@@ -22,12 +22,14 @@
     footer{background:#f9f9f9;padding:16px;text-align:center;margin-top:18px;border-top:1px solid #eee}
     .small{font-size:13px;color:#555}
     
-    /* Column CSS for vegetable list */
+    /* Vegetable List Column */
     .column {
         background: var(--accent);
         padding: 16px;
         border-radius: 10px;
         margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
     .column ul {
         list-style: none;
@@ -35,7 +37,7 @@
         margin: 0;
     }
     .column li {
-        padding: 6px 0;
+        padding: 8px 0;
         border-bottom: 1px solid #ddd;
         font-weight: 500;
     }
@@ -43,7 +45,10 @@
         border-bottom: none;
     }
 
-    @media(max-width:650px){.hero{flex-direction:column;align-items:flex-start}.hero h1{font-size:20px}}
+    @media(max-width:650px){
+        .hero{flex-direction:column;align-items:flex-start}
+        .hero h1{font-size:20px}
+    }
   </style>
 </head>
 <body>
@@ -95,7 +100,6 @@
         <li>Payment: Cash on delivery (start). Later online payments will be added.</li>
       </ol>
     </section>
-
   </main>
 
   <footer>
@@ -104,4 +108,5 @@
   </footer>
 </body>
 </html>
+
 
